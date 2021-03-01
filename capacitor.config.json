@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "app01",
+  "appId": "net.vinicius.APPTESTE",
+  "appName": "APPTESTE",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
