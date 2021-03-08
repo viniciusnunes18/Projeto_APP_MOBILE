@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "projeto-20196": {
+      "hosting": {
+        "app": [
+          "projeto-20196"
+        ]
+      }
+    }
+  }
+}

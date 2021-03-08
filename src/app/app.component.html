@@ -3,11 +3,13 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
-          <ion-list-header>APPTESTE</ion-list-header>
-          <ion-note>aplicativo de teste</ion-note>
+
+          <ion-list-header>Fuinhas</ion-list-header>
+          <ion-note>Futucando onde não deve.</ion-note>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" routerLink="/articles" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" routerLink="/articles" lines="none" detail="false"
+              routerLinkActive="selected">
               <ion-icon slot="start" name="document-text"></ion-icon>
               <ion-label>Artigos</ion-label>
             </ion-item>
@@ -21,14 +23,16 @@
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" routerLink="/contacts" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" routerLink="/contacts" lines="none" detail="false"
+              routerLinkActive="selected">
               <ion-icon slot="start" name="chatbubbles"></ion-icon>
-              <ion-label>Faça contato</ion-label>
+              <ion-label>Faça Contato</ion-label>
             </ion-item>
           </ion-menu-toggle>
 
           <ion-menu-toggle auto-hide="false">
-            <ion-item routerDirection="root" routerLink="/about" lines="none" detail="false" routerLinkActive="selected">
+            <ion-item routerDirection="root" routerLink="/about" lines="none" detail="false"
+              routerLinkActive="selected">
               <ion-icon slot="start" name="information-circle"></ion-icon>
               <ion-label>Sobre</ion-label>
             </ion-item>
@@ -37,6 +41,11 @@
         </ion-list>
 
       </ion-content>
+
+      <div class="ion-text-center ion-padding">
+        <small>&copy; Copyright 2021 André Luferat</small>
+      </div>
+
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
