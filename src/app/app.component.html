@@ -40,6 +40,19 @@
 
         </ion-list>
 
+        <ion-list>
+
+          <!-- Mostra login se não tem úsuario logado -->
+          <ion-menu-toggle auto-hide="false" *ngIf="!auth.user">
+            <ion-item routerDirection="root" routerLink="/user/login" lines="none" detail="false"
+              routerLinkActive="selected">
+              <ion-icon slot="start" name="log-in"></ion-icon>
+              <ion-label>Entrar  / login</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+
       </ion-content>
 
       <div class="ion-text-center ion-padding">

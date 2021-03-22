@@ -31,6 +31,18 @@ const routes: Routes = [
     path: 'view/:id',
     loadChildren: () => import('./pages/view/view.module').then( m => m.ViewPageModule)
   },
+  {
+    path: 'user/login',
+    loadChildren: () => import('./user/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'user/logout',
+    loadChildren: () => import('./user/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'user/profile',
+    loadChildren: () => import('./user/profile/profile.module').then( m => m.ProfilePageModule)
+  },
 
   // Página de erro 404
   // '**' TEM QUE SER SEMPRE A ÚLTIMA ROTA
@@ -38,6 +50,7 @@ const routes: Routes = [
     path: '**',
     loadChildren: () => import('./pages/e404/e404.module').then( m => m.E404PageModule)
   }
+
 ];
 
 @NgModule({
