@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-// 1) Importa dependÃªncias
+// 1) Importa dependências
 import {
   FormBuilder,
   FormGroup,
@@ -48,17 +48,17 @@ export class ContactsPage implements OnInit {
   // 5) Cria o formulário de contatos
   contactFormCreate() {
 
-    // 'contactForm' contém o formulério
-    // Um formulário a um 'agrupamento' (group) de campos...
+    // 'contactForm' contém o formulário
+    // Um formulário é um 'agrupamento' (group) de campos...
     this.contactForm = this.form.group({
 
-      // Data de envio estão vazia
+      // Data de envio está vazia
       date: [''],
 
       // Campo 'Nome' (name)
       name: [
         '', // Valor inicial
-        Validators.compose([ // Validaçãoo do campo
+        Validators.compose([ // Validação do campo
           Validators.required, // Obrigatório
           Validators.minLength(3), // Pelo menos 3 caracteres
           removeSpaces // Não permite somente espaços

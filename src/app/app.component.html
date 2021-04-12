@@ -3,9 +3,10 @@
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
+        <img src="assets/logo01.jpg">
 
-          <ion-list-header>Fuinhas</ion-list-header>
-          <ion-note>Futucando onde não deve.</ion-note>
+          <ion-list-header>Gunshop Brazil</ion-list-header>
+          <ion-note>O melhor armamento ao seu dispor!</ion-note>
 
           <ion-menu-toggle auto-hide="false">
             <ion-item routerDirection="root" routerLink="/articles" lines="none" detail="false"
@@ -42,14 +43,43 @@
 
         <ion-list>
 
-          <!-- Mostra login se não tem úsuario logado -->
-          <ion-menu-toggle auto-hide="false" *ngIf="!auth.user">
-            <ion-item routerDirection="root" routerLink="/user/login" lines="none" detail="false"
+          <!-- Se tem usuário logado -->
+
+          <div *ngIf="auth.user | async as user; else showLogin">
+
+            <ion-menu-toggle auto-hide="false">
+
+              <ion-item routerDirection="root" routerLink="/user/profile" lines="none" detail="false"
               routerLinkActive="selected">
-              <ion-icon slot="start" name="log-in"></ion-icon>
-              <ion-label>Entrar  / login</ion-label>
+              <ion-avatar slot="start">
+                <ion-img src="{{ user.photoURL }}" alt="Ver perfil de {{ user.displayName }}"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                {{ user.displayName }}
+                <div><small>{{ user.email }}</small></div>                
+              </ion-label>
             </ion-item>
-          </ion-menu-toggle>
+
+            </ion-menu-toggle>
+
+          </div>
+
+          <!-- Mostra login se usuário não está logado -->
+          <ng-template #showLogin>
+
+            <ion-menu-toggle auto-hide="false">
+
+              <ion-item routerDirection="root" routerLink="/user/login" lines="none" detail="false"
+                routerLinkActive="selected">
+                <ion-avatar slot="start">
+                  <ion-img src="assets/user.png" alt="Faça login"></ion-img>
+                </ion-avatar>
+                <ion-label>Entrar / Login</ion-label>
+              </ion-item>
+
+            </ion-menu-toggle>
+
+          </ng-template>
 
         </ion-list>
 

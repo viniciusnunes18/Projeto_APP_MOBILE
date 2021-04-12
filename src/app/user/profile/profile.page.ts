@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+// 1) Importa
+import { AngularFireAuth } from '@angular/fire/auth';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfilePage implements OnInit {
 
-  constructor() { }
+  constructor(
 
-  ngOnInit() {
+    // 2) Injeta
+    public auth: AngularFireAuth
+  ) { }
+
+  ngOnInit() { }
+
+  // 3) Abre perfil no Google
+  profile() {
+    window.open('https://myaccount.google.com/');
+    return false;
   }
 
 }
